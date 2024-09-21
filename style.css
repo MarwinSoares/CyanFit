@@ -1,0 +1,148 @@
+@charset "UTF8";
+body{
+    background-color: rgba(169, 169, 169, 0.37);
+}
+.navbar{
+    background-color: black;
+    box-shadow: 2px 2px 2px #1ac1d3;
+}
+.navbar-brand{
+    color:white;
+    margin-right: 60%;
+}
+.navstr{
+    color: #1ac1d3;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: #1ac1d3;
+}
+.cyan-fit{
+    background-color: black;
+    text-align: center ;
+   /* margin-top: 200px;
+    margin-bottom: 200px;*/   
+    box-shadow: 2px 2px 2px #0FA81C;
+}
+.cyan-fit h1{
+    color: white;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    box-shadow: 2px 2px 2px #1ac1d3;
+}
+.icons{
+    background-color: white;
+    margin-right: 0pc;
+    margin-left: 0pc;
+}
+.row {
+    --bs-gutter-x: -5.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+   /* margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));*/
+}
+.row{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+svg{
+    margin-bottom: 25px;
+}
+.bv{
+    margin: 0 auto;
+   
+    height: 700px;
+    width: 900px;
+}
+.bv h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.bv p{
+    font-size: 16px;
+}
+.bv h2{
+    font-size: 32px;
+}
+.bv img{
+   width: 100%; 
+   height: 100%;
+   margin: 0% 10%;
+   border-radius: 4.5px;
+}
+.bv a{
+text-decoration: none;
+color:darkgray;
+border:solid gray 1px ;
+border-radius: 4.5px;
+padding: 5px;
+}
+.bv a:hover{
+    background-color: black;
+    color: #0FA81C;
+    transition: 0.3s;
+}
+.bc h3{
+font-size: 32px;
+}
+#p{
+    font-size: 20px;
+}
+.bc strong{
+font-size: 24px;
+}
+
+.bc input{
+    margin: 0 auto;
+    padding: 5px;
+
+}
+#form-home{
+    text-align: center;
+    margin-top: 20px;
+  padding-left:50px ;
+  padding-right:50px ;
+    
+}
+#form-home input{
+    margin-bottom: 20px;
+    padding: 15px 150px;
+    border-radius: 40px;
+    border: 1px solid gray;
+    background-color: rgb(235, 234, 234);
+   
+}
+#mensagem{
+
+    padding:30px 110px;
+    font-size: 30px;
+    border: 1px solid gray;
+    background-color: rgb(235, 234, 234);
+    border-radius: 40px;
+    color: gray;
+
+}
+#form-home button{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 50px;
+    padding:0px 260px;    
+    font-size: 25px;
+}
+.midia{
+text-decoration: none;
+color: black;
+margin-right: 5px;
+
+}
+.midia :hover{
+    color: #1ac1d3;
+}
