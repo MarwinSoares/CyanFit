@@ -1,2 +1,2 @@
-# YellowFit
-Site funcional de uma academia
+# CyanFit
+Site funcional de uma academia,
