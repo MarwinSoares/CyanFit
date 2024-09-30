@@ -2,6 +2,12 @@
 body{
     background-color: rgba(169, 169, 169, 0.37);
 }
+.cyanlogo{
+    text-decoration: none;
+}
+.cyanlogo:hover{
+    color: white;
+}
 .navbar{
     background-color: black;
     box-shadow: 2px 2px 2px #1ac1d3;
@@ -19,6 +25,13 @@ body{
 .nav-link:hover{
     color: #1ac1d3;
 }
+.selecionado{
+    color: black;
+}
+.selecionado:hover{
+    text-decoration: none;
+    cursor: none;
+}
 .cyan-fit{
     background-color: black;
     text-align: center ;
@@ -26,6 +39,7 @@ body{
     margin-bottom: 200px;*/   
     box-shadow: 2px 2px 2px #0FA81C;
 }
+
 .cyan-fit h1{
     color: white;
     padding-top: 150px;
@@ -34,8 +48,7 @@ body{
 }
 .icons{
     background-color: white;
-    margin-right: 0pc;
-    margin-left: 0pc;
+    
 }
 .row {
     --bs-gutter-x: -5.5rem;
@@ -84,8 +97,9 @@ padding: 5px;
 }
 .bv a:hover{
     background-color: black;
-    color: #0FA81C;
-    transition: 0.3s;
+    color: #1ac1d3;
+    transition: 0.5s;
+    font-size: 20px;
 }
 .bc h3{
 font-size: 32px;
@@ -117,16 +131,15 @@ font-size: 24px;
     background-color: rgb(235, 234, 234);
    
 }
-#mensagem{
-
-    padding:30px 110px;
-    font-size: 30px;
+#mensagem {
+    padding: 5% 20%;
+    font-size: 16px;
     border: 1px solid gray;
     background-color: rgb(235, 234, 234);
     border-radius: 40px;
     color: gray;
-
 }
+
 #form-home button{
     margin-top: 20px;
     margin-bottom: 40px;
@@ -134,8 +147,13 @@ font-size: 24px;
     color: gray;
     border: 1px solid gray;
     border-radius: 50px;
-    padding:0px 260px;    
+    padding:0px 35%;    
     font-size: 25px;
+}
+#form-home button:hover{
+    background-color: gray;
+    color: white;
+    transition: 0.5s;
 }
 .midia{
 text-decoration: none;
@@ -146,3 +164,28 @@ margin-right: 5px;
 .midia :hover{
     color: #1ac1d3;
 }
+.lista{
+    padding-top: 90px;
+}
+.lista li{
+    list-style: none;
+}
+.lista a{
+    text-decoration: none;
+    color: black;
+}
+.lista a:hover{
+    color: #1ac1d3;
+}
+@media (min-width: 400px) and (max-width: 1199.98px) { 
+    .bv img{
+        display: none;
+     }
+     #form-home input {
+        margin-bottom: 20px;
+        padding: 5% 10%;
+        border-radius: 40px;
+        border: 1px solid gray;
+        background-color: rgb(235, 234, 234);
+    }
+ }
