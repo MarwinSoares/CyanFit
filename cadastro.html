@@ -44,19 +44,19 @@
         <form action="processar_cad.php" method="post">
           <label for="nome">Nome:</label>
           <br>
-          <input class="form_input" type="text" id="nome" placeholder="Ex: João Golçaves">
+          <input class="form_input" name="nome" type="text" id="nome" placeholder="Ex: João Golçaves" required>
           <br>
-          <label for="cidade">Cidade</label>
+          <label for="cidade">Estado</label>
           <br>
-          <select name="cidade" id="cidades">
+          <select name="estado" id="estados" required>
             <option value="...">Coloque Sua cidade</option>
-            <option value="SP">São Paulo</option>
-            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
           </select>
           <br>
-          <label for="estado">Estados</label>
+          <label for="estado">Cidade</label>
           <br>
-          <select name="estado" id="estados">
+          <select name="cidade" id="cidades" required>
             <option value="...">Coloque seu estado</option>
             <option value="Sp">São Paulo</option>
             <option value="Rj">Rio de Janeiro</option>
@@ -64,15 +64,15 @@
           <br>
           <label for="email">Email:</label>
           <br>
-          <input class="form_input" type="email" id="email" placeholder="Ex: usuario.usu@gmail.com">
+          <input class="form_input" name= "email" type="email" id="email" placeholder="Ex: usuario.usu@gmail.com" required>
           <br>
           <label for="senha">Senha:</label>
           <br>
-          <input class="form_input" type="password" id="senha">
+          <input class="form_input" name= "senha" type="password" id="senha" required>
           <br>
           <label for="confirme_senha">Confirme a senha:</label>
           <br>
-          <input class="form_input" type="password" id="confirme_senha">
+          <input class="form_input" type="password" id="confirme_senha" required>
           <br>
           <input id="submit" type="submit" value="Cadastra-se">
         </form>
