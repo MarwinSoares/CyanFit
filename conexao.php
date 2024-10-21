@@ -2,7 +2,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
-$nome_bd = "academia_yellowfit";
+$nome_bd = "cyanfit_academy";
 
 $conexao=mysqli_connect($servidor, $usuario, $senha, $nome_bd);
 

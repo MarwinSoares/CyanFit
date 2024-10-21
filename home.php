@@ -22,20 +22,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Sobre</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="planos.php">Planos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cadastro</a>
+                <a class="nav-link" href="login.php">Área do aluno</a>
               </li>
             </ul>
           </div>
