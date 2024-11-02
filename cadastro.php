@@ -22,16 +22,10 @@
                 <a class="nav-link " aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Sobre</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="planos.php">Planos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
+                <a class="nav-link" href="area_aluno.php">Área do aluno</a>
               </li>
 
               
@@ -47,14 +41,16 @@
       <div class="col-md-6">
       <div class="form_cad">
           <form action="processar_cad.php">
-            <label for="nome">Nome:</label>
-            <br>
-            <input type="text" id="nome" name="nome">
-            <br>
-            <label for="email">Email</label>
-            <br>
-            <input type="email" id="email" name="email">
-            <br>
+            <div>
+              <label for="nome">Nome:</label>
+              <br>
+              <input type="text" id="nome" name="nome">
+              <br>
+              <label for="email">Email</label>
+              <br>
+              <input type="email" id="email" name="email">
+              <br>
+            </div>
             <label for="telefone">Telefone</label>
             <br>
             <input type="text" name="dd" placeholder="55">
@@ -62,9 +58,10 @@
             <br>
             <label for="sexo">Sexo</label>
             <br>
-            <select name="sexo" id="sexo">
+            <select name="sexo" id="sexo" required>
+              <option value="">Selecione um genero</option>
               <option value="M">Masculino</option>
-              <option value="N">Feminino</option>
+              <option value="F">Feminino</option>
             </select>
             <br>
             <label for="cpf">CPF</label>
