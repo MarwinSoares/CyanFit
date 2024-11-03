@@ -45,7 +45,7 @@
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #fff; /* Fundo branco */
+            background-color: #fff;
             text-align: left;
             position: relative;
             cursor: pointer;
@@ -77,15 +77,6 @@
             font-size: 12px;
             color: #666;
         }
-        .benefits-button {
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-            color: #007bff;
-            font-size: 14px;
-            text-decoration: underline;
-            cursor: pointer;
-        }
         .badge {
             position: absolute;
             top: -10px;
@@ -100,7 +91,6 @@
         .buttons {
             margin-top: 30px;
             display: flex;
-            gap: 15px;
             justify-content: center;
         }
         .buttons button {
@@ -108,16 +98,9 @@
             font-size: 16px;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
-        }
-        .buttons .details-button {
-            background-color: transparent;
-            border: 2px solid #007bff;
-            color: #333;
-        }
-        .buttons .signup-button {
             background-color: black;
             color: white;
+            cursor: pointer;
         }
         .radio {
             position: absolute;
@@ -130,11 +113,11 @@
 <body>
     <div class="container">
         <h2>Escolha o plano mais vantajoso para você:</h2>
-        <form id="planForm">
+        <form id="planForm" action="processar_plano.php" method="POST">
             <div class="plans">
                 <!-- Plano Black -->
                 <label class="plan plan-highlight">
-                    <input type="radio" name="plan" value="Plano Black" class="radio" required>
+                    <input type="radio" name="plan" value="Plano Black|15.00|Treine em qualquer academia da CyanFit, seja no Brasil ou na América Latina." class="radio" required>
                     <div class="badge">O mais vantajoso</div>
                     <h3>Plano Black</h3>
                     <p>Treine em qualquer academia da CyanFit, seja no Brasil ou na América Latina. São +1500 unidades em 15 países!</p>
@@ -145,7 +128,7 @@
 
                 <!-- Plano Fit -->
                 <label class="plan">
-                    <input type="radio" name="plan" value="Plano Fit" class="radio" required>
+                    <input type="radio" name="plan" value="Plano Fit|20.00|Nosso plano mais econômico para você se exercitar quando e onde quiser na academia de sua escolha." class="radio" required>
                     <h3>Plano Fit</h3>
                     <p>Nosso plano mais econômico para você se exercitar quando e onde quiser na academia de sua escolha.</p>
                     <div class="price">R$ 20,00<small>/mês</small></div>
@@ -155,7 +138,7 @@
 
                 <!-- Plano Smart -->
                 <label class="plan">
-                    <input type="radio" name="plan" value="Plano Smart" class="radio" required>
+                    <input type="radio" name="plan" value="Plano Smart|149.90|Nosso plano mensal para você que não quer se comprometer, mas quer treinar em uma academia de alto padrão!" class="radio" required>
                     <h3>Plano Smart</h3>
                     <p>Nosso plano mensal para você que não quer se comprometer, mas quer treinar em uma academia de alto padrão!</p>
                     <div class="price">R$ 149,90<small>/mês</small></div>
@@ -164,23 +147,9 @@
             </div>
 
             <div class="buttons">
-                <button type="submit" class="signup-button">Continuar para o cadastro</button>
+                <button type="submit">Continuar para o cadastro</button>
             </div>
         </form>
     </div>
-
-    <script>
-        document.getElementById('planForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const selectedPlan = document.querySelector('input[name="plan"]:checked');
-            if (selectedPlan) {
-                alert(`Você escolheu o ${selectedPlan.value}`);
-                // Aqui você pode redirecionar para outra página ou salvar a escolha do usuário
-                window.location.href = "cadastro.php"; // Exemplo de redirecionamento para a página de cadastro
-            } else {
-                alert("Por favor, selecione um plano.");
-            }
-        });
-    </script>
 </body>
 </html>
