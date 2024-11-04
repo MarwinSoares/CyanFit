@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <title>Cadastro | CyanFit</title>
+    <title>Cadastro | CyanFit</title>
     <style>
         * {
             box-sizing: border-box;
@@ -85,42 +86,52 @@
     <div class="container">
         <div class="form-section">
             <h2>Agora, vamos criar seu cadastro na <span>CyanFit</span>:</h2>
-            <form>
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" placeholder="Digite seu documento">
-                
+            <form action="processar_cad.php" method="POST">
+              
                 <label for="nome">Nome completo</label>
-                <input type="text" id="nome" placeholder="Digite seu nome completo">
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
                 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Ex: exemplo@cyanfit.com">
+                <input type="email" id="email" name="email" placeholder="Ex: exemplo@cyanfit.com" required>
                 
-                <label for="sexo">Sexo</label>
-                <select id="sexo">
-                    <option value="" disabled selected>Toque para escolher</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                </select>
                 
                 <label for="telefone">DDD + Celular</label>
-                <input type="tel" id="telefone" placeholder="(11) 91234-5678">
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678" required>
                 
                 <label for="nascimento">Data de nascimento</label>
-                <input type="date" id="nascimento">
+                <input type="date" id="nascimento" name="nascimento" required>
+
+                <label for="plano_assinado">Plano</label>
+                <select name="plano_assinado" id="plano_assinado" required>
+                  <option value="">....</option>
+                  <option value="150">Plano Black R$150,00</option>
+                  <option value="90">Plano fit R$90</option>
+                  <option value="80">Plano cyan R$80</option>
+                </select>
+
+                <label for="treinos">Treinos</label>
+                <select name="nome_treino" id="nome_treino">
+                  <option value="treino_a">
+                  treino A:
+                  <br> 
+                  Focado em força e resistência, com ênfase em exercícios compostos para ganho de massa muscular.
+                  </option>
+                  <option value="treino_b">
+                  treino B:
+                  <br> 
+                  Focado em força e resistência, com ênfase em exercícios compostos para ganho de massa muscular.
+                  </option>
+                  <option value="treino_a">
+                  treino C: 
+                  <br> 
+                  Focado em força e resistência, com ênfase em exercícios compostos para ganho de massa muscular.
+                  </option>
+                </select>
                 
                 <p>Utilizamos seus dados pessoais para cadastro e comunicação, de acordo com nossa política de privacidade.</p>
                 
                 <button type="submit">Continuar cadastro</button>
             </form>
-        </div>
-        
-        <div class="info-section">
-            <h3>Plano Black</h3>
-            <p>Primeira Mensalidade: R$ 0,00</p>
-            <p>Mensalidades Restantes: R$ 139,90</p>
-            <p>Taxa de adesão: R$ 99,90</p>
-            <p>Uma cobrança é gerada a cada mês. Certifique-se de que seu cartão suporta esse valor.</p>
         </div>
     </div>
 </body>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['erro'])) {
+    echo "<div class='alert alert-danger'>" . $_SESSION['erro'] . "</div>";
+    unset($_SESSION['erro']); // Limpa a mensagem após exibir
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cadastro.css">
-    <title>CyanFit - Escolha de Planos</title>
+    <title>CyanFit - Escolha de Treino</title>
     <style>
         * {
             box-sizing: border-box;
@@ -112,42 +120,40 @@
 </head>
 <body>
     <div class="container">
-        <h2>Escolha o plano mais vantajoso para você:</h2>
-        <form id="planForm" action="processar_plano.php" method="POST">
+        <h2>Escolha o treino mais adequado para você:</h2>
+        <form id="treinoForm" action="processar_treino.php" method="POST">
             <div class="plans">
-                <!-- Plano Black -->
+                <!-- Treino A -->
                 <label class="plan plan-highlight">
-                    <input type="radio" name="plan" value="Plano Black|15.00|Treine em qualquer academia da CyanFit, seja no Brasil ou na América Latina." class="radio" required>
-                    <div class="badge">O mais vantajoso</div>
-                    <h3>Plano Black</h3>
-                    <p>Treine em qualquer academia da CyanFit, seja no Brasil ou na América Latina. São +1500 unidades em 15 países!</p>
-                    <div class="price">R$ 15,00<small>/mês</small></div>
-                    <small>no 1º mês, depois R$ 129,90/mês</small><br>
-                    <small>12 meses de fidelidade | Adesão: R$ 99,90</small>
+                    <input type="radio" name="nome_treino" value="Treino A|Descrição do Treino A" class="radio" required>
+                    <div class="badge">Mais Popular</div>
+                    <h3>Treino A</h3>
+                    <p>Focado em força e resistência, com ênfase em exercícios compostos para ganho de massa muscular.</p>
+                    <div class="price">Duração: 3 meses</div>
+                    <small>Ideal para iniciantes e intermediários.</small>
                 </label>
 
-                <!-- Plano Fit -->
+                <!-- Treino B -->
                 <label class="plan">
-                    <input type="radio" name="plan" value="Plano Fit|20.00|Nosso plano mais econômico para você se exercitar quando e onde quiser na academia de sua escolha." class="radio" required>
-                    <h3>Plano Fit</h3>
-                    <p>Nosso plano mais econômico para você se exercitar quando e onde quiser na academia de sua escolha.</p>
-                    <div class="price">R$ 20,00<small>/mês</small></div>
-                    <small>no 1º mês, depois R$ 129,90/mês</small><br>
-                    <small>12 meses de fidelidade | Adesão: R$ 99,90</small>
+                    <input type="radio" name="nome_treino" value="Treino B|Descrição do Treino B" class="radio" required>
+                    <h3>Treino B</h3>
+                    <p>Programa de alta intensidade voltado para queima de gordura e condicionamento cardiovascular.</p>
+                    <div class="price">Duração: 2 meses</div>
+                    <small>Recomendado para quem busca emagrecimento.</small>
                 </label>
 
-                <!-- Plano Smart -->
+                <!-- Treino C -->
                 <label class="plan">
-                    <input type="radio" name="plan" value="Plano Smart|149.90|Nosso plano mensal para você que não quer se comprometer, mas quer treinar em uma academia de alto padrão!" class="radio" required>
-                    <h3>Plano Smart</h3>
-                    <p>Nosso plano mensal para você que não quer se comprometer, mas quer treinar em uma academia de alto padrão!</p>
-                    <div class="price">R$ 149,90<small>/mês</small></div>
-                    <small>Sem fidelidade | Adesão: R$ 99,90</small>
+                    <input type="radio" name="nome_treino" value="Treino C|Descrição do Treino C" class="radio" required>
+                    <h3>Treino C</h3>
+                    <p>Treinamento funcional com foco em mobilidade, flexibilidade e fortalecimento do core.</p>
+                    <div class="price">Duração: 1 mês</div>
+                    <small>Ótimo para recuperação e prevenção de lesões.</small>
                 </label>
             </div>
 
             <div class="buttons">
-                <button type="submit">Continuar para o cadastro</button>
+                <button type="submit">Continuar para a ficha</button>
             </div>
         </form>
     </div>
